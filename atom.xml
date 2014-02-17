@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[My Octopress Blog]]></title>
+  <link href="http://ZhengCrazy.github.io/atom.xml" rel="self"/>
+  <link href="http://ZhengCrazy.github.io/"/>
+  <updated>2014-02-17T23:44:10+08:00</updated>
+  <id>http://ZhengCrazy.github.io/</id>
+  <author>
+    <name><![CDATA[Your Name]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Linux Shell命令之压缩与解压]]></title>
+    <link href="http://ZhengCrazy.github.io/blog/2014/02/16/testing-blog/"/>
+    <updated>2014-02-16T22:43:32+08:00</updated>
+    <id>http://ZhengCrazy.github.io/blog/2014/02/16/testing-blog</id>
+    <content type="html"><![CDATA[<p>&nbsp;&nbsp;&nbsp;&nbsp;Linux压缩文件的扩展名有<em>.gz、</em>.bz2和*.Z。他们分别是通过gzip、bzip2和compress这几个命令
+来实现的。下面分别描述这几个命令的用法：</p>
+
+<p>
+1. gzip:&nbsp;&nbsp;    gzip是应用最广泛的压缩命令，gzip可以解开compress和gzip所压缩的文件。gzip的用
+法如下:<br>
+&nbsp;&nbsp;&nbsp; <i>gzip [-cdtv] 文件名</i><br>
+&nbsp;&nbsp;&nbsp;    -c 将压缩的数据输出到屏幕，一般配合数据流重定向使用<br>
+&nbsp;&nbsp;&nbsp;    -d 解压指定的压缩文件<br>
+&nbsp;&nbsp;&nbsp;    -t 检查压缩文件的一致性，主要用于查看文件是否有错误<br>
+&nbsp;&nbsp;&nbsp;    -v 查看压缩比等压缩信息<br>
+&nbsp;&nbsp;&nbsp;    -# 压缩等级，具体参数为数值-1到-9，其中-1压缩速度最快但压缩比最差默认为-6<br><br>
+&nbsp;&nbsp;&nbsp;例如：<br> 
+&nbsp;&nbsp;&nbsp;$ cp /etc/man.config ./&nbsp; #将etc目录下的man.config文件拷贝到当前目录下<br>
+&nbsp;&nbsp;&nbsp;$ gzip -v man.config &nbsp;&nbsp;&nbsp; # 将拷贝过来的man.config文件压缩生成man.config.gz<br>
+&nbsp;&nbsp;&nbsp;$ gzip -d ./man.config.gz&nbsp;# 将压缩文件man.config.gz解压到但前目录<br><br>
+注意：gzip命令在压缩后将生成压缩文件，原来被压缩的文件将消失。同样在解压压缩文件后，将生成解压后的文件同时压缩
+文件消失。<br><br>
+zcat命令可以用来查看纯文本被压缩的文件，例如：&nbsp;&nbsp;zcat man.config.gz&nbsp;&nbsp;#查看纯文本压缩文件 
+</p>
+
+]]></content>
+  </entry>
+  
+</feed>
